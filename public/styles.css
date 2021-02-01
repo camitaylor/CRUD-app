@@ -55,7 +55,32 @@ body {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-h1,
-h2 {
-  margin: 0;
+.card {
+  margin-bottom: 25px;
+  text-align: center;
+  padding-top: 15px;
+  background-color: rgb(182, 179, 179);
+  opacity: 0.8;
+}
+
+#jumbotron {
+  text-align: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+#replace,
+#remove {
+  padding-bottom: 25px;
+  margin-left: 200px;
+}
+
+#quotes {
+  margin-left: 185px;
+  margin-right: -12px;
+}
+
+#header {
+  margin-left: 75px;
+  margin-top: 275px;
 }
