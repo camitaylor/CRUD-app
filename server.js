@@ -16,10 +16,6 @@ MongoClient.connect('mongodb+srv://cami_taylor:abcd1234@cluster0.oxcea.mongodb.n
     app.use(express.static('public'))
 
 
-    app.listen(9000, function() {
-    console.log('listening on 9000')
-    })
-
     app.get('/', (req, res) => {
         db.collection('quotes').find().toArray()
             .then(quotes => {
@@ -67,4 +63,8 @@ MongoClient.connect('mongodb+srv://cami_taylor:abcd1234@cluster0.oxcea.mongodb.n
             })
             .catch(error => console.error(error))
     })
+
+    app.listen(9000, function() {
+        console.log('listening on 9000')
+        })
 })
