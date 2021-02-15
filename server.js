@@ -24,6 +24,14 @@ MongoClient.connect('mongodb+srv://cami_taylor:abcd1234@cluster0.oxcea.mongodb.n
             .catch(error => console.error(error))
     })
 
+    app.get('/quotes', (req, res) => {
+        db.collection('quotes').find().toArray()
+            .then(quotes => {
+                res.render('index.ejs', {quotes: quotes})
+            })
+            .catch(error => console.error(error))
+    })
+
     app.post('/quotes', (req, res) => {
         quotesCollection.insertOne(req.body)
         .then(result => {
